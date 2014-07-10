@@ -1,0 +1,5 @@
+.container
+	= render partial: 'admin_nav'
+	h1 Create New Article
+	= form_for(:test, url: root_path) do |f|
+		= f.cktext_area :test, class: 'ckeditor'
