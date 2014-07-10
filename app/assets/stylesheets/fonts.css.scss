@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300);
+@import 'color';
+
+* {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 18px;
+}
+
+nav {
+	font-weight: 300;
+}
+
+footer {
+	color: $white;
+	text-align: center;
+}
+
+p {
+	margin: 10px;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+a, a:visited {
+	font-weight: 400
+}
+
+.hero .logo-banner{
+	font-weight: 300;
+	font-size: 26px;
+	color: #FFF;
+	text-shadow: 2px 2px 0 #000;
+	letter-spacing: 1px;
+}
+.blue {
+	color: $blue;
+}
+
+span.copyright {
+	font-size: 38px;
+}

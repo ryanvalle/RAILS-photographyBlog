@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1500px" height="335px" viewBox="0 0 1500 335" enable-background="new 0 0 1500 335" xml:space="preserve">
+<g id="Layer_2">
+	<path fill="#414042" stroke="#00AEEF" stroke-width="10" stroke-miterlimit="10" d="M404.521,236.354
+		c0,14.33-11.617,25.947-25.947,25.947H39.051c-14.33,0-25.947-11.617-25.947-25.947V68.216c0-14.331,11.617-25.947,25.947-25.947
+		h339.522c14.33,0,25.947,11.617,25.947,25.947V236.354z"/>
+	<line fill="none" stroke="#00AEEF" stroke-width="10" stroke-miterlimit="10" x1="13.104" y1="88.628" x2="269.463" y2="88.628"/>
+	<path d="M106.86,239.122c0,5.731-4.646,10.379-10.379,10.379h-53.97c-5.732,0-10.379-4.647-10.379-10.379V70.984
+		c0-5.732,4.646-10.379,10.379-10.379h53.97c5.732,0,10.379,4.646,10.379,10.379V239.122z"/>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="29.0186" y1="151.939" x2="103.7471" y2="151.939">
+		<stop  offset="0" style="stop-color:#545454"/>
+		<stop  offset="0.5" style="stop-color:#696969"/>
+		<stop  offset="1" style="stop-color:#3D3D3D"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M103.747,236.008c0,5.732-4.647,10.379-10.379,10.379H39.397c-5.732,0-10.379-4.646-10.379-10.379
+		V67.87c0-5.732,4.647-10.379,10.379-10.379h53.971c5.732,0,10.379,4.646,10.379,10.379V236.008z"/>
+	
+		<line fill="none" stroke="#00AEEF" stroke-width="10" stroke-miterlimit="10" x1="218.953" y1="102.121" x2="403.352" y2="102.121"/>
+</g>
+<g id="Layer_3">
+	<circle stroke="#6D6E71" stroke-width="10" stroke-miterlimit="10" cx="258.459" cy="179.238" r="118.021"/>
+	<circle fill="#414042" stroke="#808285" stroke-width="10" stroke-miterlimit="10" cx="258.459" cy="179.238" r="90.854"/>
+	<circle fill="#414042" stroke="#808285" stroke-width="10" stroke-miterlimit="10" cx="258.459" cy="179.238" r="33.102"/>
+	<path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M1770.906,31.973"/>
+</g>
+<g id="Layer_1">
+	
+		<text transform="matrix(1 0 0 1 1050.5068 264.7168)" fill="#00AEEF" font-family="'YanoneKaffeesatz-Regular'" font-size="358.5574">img</text>
+	
+		<text transform="matrix(1 0 0 1 444.5205 264.793)" fill="#58595B" font-family="'YanoneKaffeesatz-Regular'" font-size="358.5574">techn</text>
+</g>
+</svg>

@@ -1,0 +1,85 @@
+@import 'color';
+
+.container-fluid {
+	padding: 0;
+}
+
+.container-fluid#index {
+	.hero {
+		background-image: asset-url("backgrounds/background_empire_state.jpg",image);
+		background-size: cover;
+		background-position: center top;
+		background-repeat: none;
+		width: 100%;
+		height: 400px;
+	}
+
+	.welcome {
+		text-align: center;
+		font-size: 24px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $white;
+		position: relative;
+		height: 100%;
+		.logo-banner {
+			background: rgba(255, 255, 255, 0.1);
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			margin: -80px auto 0 auto;
+			padding: 20px;
+		}
+		.logo {
+			background-image: asset-url("logos/technimg_logo_white_shadow_md.png",image);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 100px;
+			margin: 0 auto;
+		}
+	}
+}
+
+.container-fluid#about {
+	.hero {
+		background-image: asset-url("backgrounds/background_blurred_fireworks.jpg",image);
+		background-size: cover;
+		background-position: center top;
+		background-repeat: none;
+		width: 100%;
+		height: 200px;
+		position: relative;
+	}
+	h1 {
+		color: $white;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		bottom: 0;
+		padding: 0 0 10px 10px;
+		font-size: 72px;
+		text-shadow: 4px 4px 0 #000;
+	}
+	span {
+		font-size: inherit;
+	}
+	article {
+		width: 100%;
+		padding: 0;
+		border: 1px solid #ccc;
+		border-radius: 10px 10px 10px 0;
+		margin: 10px;
+		background: #f1f1f1;
+		box-shadow: 2px 2px 5px #ddd;
+		h2 {
+			padding: 10px;
+			margin: 0;
+			color: $white;
+			border-radius: 10px 10px 0 0
+		}
+		p {
+			margin: 10px
+		}
+	}
+}
