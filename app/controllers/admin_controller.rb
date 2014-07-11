@@ -5,6 +5,16 @@ class AdminController < ApplicationController
 	end
 
 	def new
+		@article = Article.new
+	end
+
+	def create
+		article_new = Article.new(article_params)
+		if article_new.save
+			redirect_to admin_index_path
+		else
+			redirect_to root_path
+		end
 	end
 
 	def auth
@@ -31,5 +41,9 @@ class AdminController < ApplicationController
 				store_location
 				redirect_to "#{root_url}"
 			end
+		end
+
+		def article_params
+			params.require(:article).permit(:title, :address, :body, :user_id, :status)
 		end
 end

@@ -1,5 +1,26 @@
 .container
 	= render partial: 'admin_nav'
 	h1 Create New Article
-	= form_for(:test, url: root_path) do |f|
-		= f.cktext_area :test, class: 'ckeditor'
+	= form_for(@article, url: admin_index_path) do |f|
+		= f.label :title
+		= f.text_field :title, class: "form-control"
+		br
+		= f.label :address
+		= f.text_field :address, class: "form-control"
+		br
+		= f.cktext_area :body, class: 'ckeditor'
+		br
+		br
+		= f.label :status
+		br
+		.input-group.radio
+			= f.radio_button :status, 1
+			= f.label "Published"
+		.input-group.radio
+			= f.radio_button :status, 2
+			= f.label "Preview"
+		input-group.radio
+			= f.radio_button :status, 0
+			= f.label "Un-Published"
+		= f.submit "Submit", class: "btn-lg btn-primary"
+		br
