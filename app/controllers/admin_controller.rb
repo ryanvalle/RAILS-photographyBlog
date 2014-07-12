@@ -1,15 +1,26 @@
 class AdminController < ApplicationController
-	before_filter :signed_in_user, only: [:show, :new, :edit, :update,:create]
+	before_filter :signed_in_user, only: [:show, :new, :edit, :update,:create, :articles]
 
 	def index
+		if signed_in?
+			redirect_to articles_admin_path
+		end
 	end
 
 	def images
 		@images = Gallery.paginate(page: params[:page], per_page: 10).order("id DESC")
 	end
 
+	def articles
+		@articles = Article.paginate(page: params[:page], per_page: 10).order("id DESC")
+	end
+
 	def new
 		@article = Article.new
+	end
+
+	def edit
+		@article = Article.find(params[:id])
 	end
 
 	def create
@@ -18,6 +29,17 @@ class AdminController < ApplicationController
 			redirect_to admin_index_path
 		else
 			redirect_to root_path
+		end
+	end
+
+	def update
+		article_update = Article.find(params[:article][:id])
+		if article_update.update_attributes(article_params)
+			flash[:notice] = "#{article_update.title} was updated"
+			redirect_to articles_admin_path
+		else
+			flash[:notice] = "Error saving"
+			redirect_to edit_admin_path(article_update.id)
 		end
 	end
 
@@ -43,11 +65,11 @@ class AdminController < ApplicationController
 		def signed_in_user
 			unless signed_in?
 				store_location
-				redirect_to "#{root_url}"
+				redirect_to admin_index_path
 			end
 		end
 
 		def article_params
-			params.require(:article).permit(:title, :address, :body, :user_id, :status)
+			params.require(:article).permit(:id, :title, :address, :body, :user_id, :status)
 		end
 end
