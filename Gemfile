@@ -22,6 +22,7 @@ gem 'spring',        group: :development
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'ckeditor'
+gem 'carrierwave'
 
 # Use unicorn as the app server
 # gem 'unicorn'
