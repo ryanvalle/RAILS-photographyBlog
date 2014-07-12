@@ -8,6 +8,7 @@ gem 'sqlite3', group: [:development, :test]
 gem 'pg', group: :production
 
 gem 'bootstrap-sass'
+gem 'will_paginate'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'

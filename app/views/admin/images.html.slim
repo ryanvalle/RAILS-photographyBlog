@@ -1,6 +1,5 @@
--params[:controller] = 'admin'
 .container
-	= render partial: 'admin/admin_nav'
+	= render partial: 'admin_nav'
 	- unless flash[:notice].blank?
 		.alert.alert-success
 			= flash[:notice]
@@ -14,7 +13,8 @@
 				th Source
 				th Delete
 		tbody
-			- @images.each do |image|
+			= will_paginate @image_p, params: {controller: :admin, action: :images}
+			- @image_p.each do |image|
 				tr
 					td 
 						= image.id
