@@ -12,9 +12,6 @@ class GalleryController < ApplicationController
 		end
 	end
 
-	def paginate(page)
-	end
-
 	def destroy
 		@image = Gallery.find(params[:id])
 		@image.destroy

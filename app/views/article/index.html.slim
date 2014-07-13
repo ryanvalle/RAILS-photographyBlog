@@ -2,14 +2,14 @@
 	.hero
 		.welcome
 
-.container#article
-	= will_paginate @articles
+.container#articles
 	- @articles.each do |article|
 		article
 			.title
 				h2 #{article.title}
+			.image-preview style="background-image: url(#{article.gallery.try(:attachment_url)})"
 			.preview
-				p
-					= truncate(strip_tags(article.body), length: 150, omission: '...')
+				= Nokogiri::HTML.parse(article.body).css('p').first.to_s.html_safe
 			.read-more
 				= link_to "Read More", show_article_path(article)				
+	= will_paginate @articles, previous_label: "< Newer Posts", next_label: "Older Posts >", renderer: BootstrapPagination::Rails
