@@ -15,4 +15,9 @@
 
 class Article < ActiveRecord::Base
 	belongs_to :gallery
+
+	def to_param
+		filter_address = address.gsub(/[\s]+/,"-").gsub(/[^\w-]+/, "")
+		"#{id}-#{filter_address}"
+	end
 end

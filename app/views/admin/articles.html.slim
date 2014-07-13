@@ -1,0 +1,40 @@
+.container
+	= render partial: 'admin_nav' 
+	- unless flash[:notice].blank?
+		.alert.alert-success
+			= flash[:notice]
+
+	h1 Manage Articles
+	= will_paginate @articles, renderer: BootstrapPagination::Rails
+	table.table.table-striped
+		thead
+			tr
+				th #
+				th Title
+				th Body Preview
+				th
+				th
+				th
+		tbody
+			- @articles.each do |article|
+				tr
+					td 
+						= article.id
+					td 
+						= article.title
+					td
+						= truncate(strip_tags(article.body), length: 150, omission: '...')
+					td
+						= link_to "View Article", '#', class: "btn btn-primary"
+					td
+						= link_to "Edit Article", edit_admin_path(article.id), class: "btn btn-warning"
+					td style="text-align: center"
+						- case article.status
+							- when 1
+								.btn.btn-success.default-cursor Live
+							- when 2
+								.btn.btn-warning.default-cursor Preview
+							- when 0 
+								.btn.btn-danger.default-cursor Un-Published
+
+					

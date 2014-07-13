@@ -15,4 +15,7 @@ Rails.application.routes.draw do
 		get '/admin/add-image' => "gallery#new", as: "add_gallery"
 		post '/admin/create-image' => "gallery#create", as: "create_gallery"
 
+	resources :article, :path => "article"
+		get '/article/:id' => "article#show", as: "show_article"
+
 end

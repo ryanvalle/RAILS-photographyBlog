@@ -1,0 +1,36 @@
+.container
+	= render partial: "admin_nav"
+	- unless flash[:notice].blank?
+		.alert.alert-danger
+			= flash[:notice]
+	h1 Edit Article
+	= form_for(@article, url: update_admin_path) do |f|
+		= f.hidden_field :id
+		= f.hidden_field :user_id, value: current_user.id
+		= f.label :title
+		= f.text_field :title, class: "form-control"
+		br
+		= f.label "Associate an Image (Insert ID #)"
+		= f.text_field :gallery_id, class: "form-control"
+		.admin-image-preview
+			= image_tag @article.gallery.try(:attachment_url)
+		br
+		= f.label :address
+		= f.text_field :address, class: "form-control"
+		br
+		= f.cktext_area :body, class: 'ckeditor'
+		br
+		br
+		= f.label :status
+		br
+		.input-group.radio
+			= f.radio_button :status, 1
+			= f.label "Published"
+		.input-group.radio
+			= f.radio_button :status, 2
+			= f.label "Preview"
+		input-group.radio
+			= f.radio_button :status, 0
+			= f.label "Un-Published"
+		= f.submit "Submit", class: "btn-lg btn-primary"
+		br

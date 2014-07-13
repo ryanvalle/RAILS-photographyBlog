@@ -1,0 +1,15 @@
+.container-fluid#articles
+	.hero
+		.welcome
+
+.container#article
+	= will_paginate @articles
+	- @articles.each do |article|
+		article
+			.title
+				h2 #{article.title}
+			.preview
+				p
+					= truncate(strip_tags(article.body), length: 150, omission: '...')
+			.read-more
+				= link_to "Read More", show_article_path(article)				
