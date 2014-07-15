@@ -21,4 +21,12 @@
 			= @article.user.name
 			|  on 
 			= @article.created_at.in_time_zone("Pacific Time (US & Canada)").strftime('%h %d, %Y @ %l:%M %p')
+		.exif-data
+			#toggle-exif-data Toggle Photo Information
+			#exif
+				table.table-striped
+					-@exif.each do |k,v|
+						tr
+							td #{k.to_s.gsub(/[_]+/," ").split(' ').map {|w| w.capitalize }.join(' ')}
+							td #{v}
 		= @article.body.html_safe

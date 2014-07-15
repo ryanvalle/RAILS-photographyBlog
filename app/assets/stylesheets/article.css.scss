@@ -85,6 +85,30 @@
 			}
 		}
 		article {
+			.exif-data {
+				background: #eee;
+				#toggle-exif-data {
+					text-align: center;
+					border: 1px solid #ccc;
+					background: #f7f7f7;
+					padding: 5px 0;
+					border-radius: 10px 10px 0 0;
+					cursor: pointer;
+				}
+				#exif {
+					height: 0;
+					overflow: hidden;
+				}
+				table {
+					width: 100%;
+				}
+				tr, td {
+					text-align: center;
+					width: 50%;
+					padding: 5px;
+					border: 1px solid #ccc;
+				}
+			}
 			h1 {
 				margin: 10px auto 0 auto;
 			}

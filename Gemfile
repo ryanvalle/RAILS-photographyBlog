@@ -25,6 +25,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'nokogiri'
+gem 'exifr'
 
 # Use unicorn as the app server
 # gem 'unicorn'
