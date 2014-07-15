@@ -16,45 +16,46 @@
 				.title
 					= @articles[0].try(:title)
 				.darken
-	.tilainer.col-sm-8
-		= link_to show_article_path(@articles[1]) do
-			.tile style="background-image: url(#{@articles[1].try(:gallery).try(:attachment_url)})"
-				.title
-					= @articles[1].try(:title)
-				.darken
-	.tilainer.col-sm-4
-		= link_to show_article_path(@articles[2]) do
-			.tile style="background-image: url(#{@articles[2].try(:gallery).try(:attachment_url)})"
-				.title
-					= @articles[2].try(:title)
-				.darken
-	.tilainer.col-sm-4
-		= link_to show_article_path(@articles[3]) do
-			.tile style="background-image: url(#{@articles[3].try(:gallery).try(:attachment_url)})"
-				.title
-					= @articles[3].try(:title)
-				.darken
-	.tilainer.col-sm-8
-		= link_to show_article_path(@articles[4]) do
-			.tile style="background-image: url(#{@articles[4].try(:gallery).try(:attachment_url)})"
-				.title
-					= @articles[4].try(:title)
-				.darken
-	.tilainer.col-sm-4
-		= link_to show_article_path(@articles[5]) do
-			.tile style="background-image: url(#{@articles[5].try(:gallery).try(:attachment_url)})"
-				.title
-					= @articles[5].try(:title)
-				.darken
-	.tilainer.col-sm-4
-		= link_to show_article_path(@articles[6]) do
-			.tile style="background-image: url(#{@articles[6].try(:gallery).try(:attachment_url)})"
-				.title
-					= @articles[6].try(:title)
-				.darken
-	.tilainer.col-sm-4
-		= link_to show_article_path(@articles[7]) do
-			.tile style="background-image: url(#{@articles[7].try(:gallery).try(:attachment_url)})"
-				.title
-					= @articles[7].try(:title)
-				.darken
+	-if @articles.count > 4
+		.tilainer.col-sm-8
+			= link_to show_article_path(@articles[1]) do
+				.tile style="background-image: url(#{@articles[1].try(:gallery).try(:attachment_url)})"
+					.title
+						= @articles[1].try(:title)
+					.darken
+		.tilainer.col-sm-4
+			= link_to show_article_path(@articles[2]) do
+				.tile style="background-image: url(#{@articles[2].try(:gallery).try(:attachment_url)})"
+					.title
+						= @articles[2].try(:title)
+					.darken
+		.tilainer.col-sm-4
+			= link_to show_article_path(@articles[3]) do
+				.tile style="background-image: url(#{@articles[3].try(:gallery).try(:attachment_url)})"
+					.title
+						= @articles[3].try(:title)
+					.darken
+		.tilainer.col-sm-8
+			= link_to show_article_path(@articles[4]) do
+				.tile style="background-image: url(#{@articles[4].try(:gallery).try(:attachment_url)})"
+					.title
+						= @articles[4].try(:title)
+					.darken
+		.tilainer.col-sm-4
+			= link_to show_article_path(@articles[5]) do
+				.tile style="background-image: url(#{@articles[5].try(:gallery).try(:attachment_url)})"
+					.title
+						= @articles[5].try(:title)
+					.darken
+		.tilainer.col-sm-4
+			= link_to show_article_path(@articles[6]) do
+				.tile style="background-image: url(#{@articles[6].try(:gallery).try(:attachment_url)})"
+					.title
+						= @articles[6].try(:title)
+					.darken
+		.tilainer.col-sm-4
+			= link_to show_article_path(@articles[7]) do
+				.tile style="background-image: url(#{@articles[7].try(:gallery).try(:attachment_url)})"
+					.title
+						= @articles[7].try(:title)
+					.darken
