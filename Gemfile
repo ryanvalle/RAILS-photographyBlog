@@ -5,7 +5,7 @@ gem 'rails', '4.1.1'
 gem 'annotate', group: :devleopment
 
 gem 'sqlite3', group: [:development, :test]
-gem 'pg', group: :production
+gem 'mysql2', group: :production
 
 gem 'bootstrap-sass'
 gem 'will_paginate-bootstrap'
