@@ -25,7 +25,7 @@
 					td
 						= truncate(strip_tags(article.body), length: 150, omission: '...')
 					td
-						= link_to "View Article", '#', class: "btn btn-primary"
+						= link_to "View Article", show_article_path(article), class: "btn btn-primary", target:"blank"
 					td
 						= link_to "Edit Article", edit_admin_path(article.id), class: "btn btn-warning"
 					td style="text-align: center"

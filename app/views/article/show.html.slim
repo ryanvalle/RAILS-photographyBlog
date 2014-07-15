@@ -1,4 +1,24 @@
 .container-fluid#article
-	.hero
-	= @article.title
-	= @article.address
+	.target
+		.hero style="background-image: url(#{@article.gallery.try(:attachment_url)})"
+
+.container.article#article 
+	.featured-image
+		= image_tag @article.gallery.attachment_url
+	.breadcrumbs
+		= link_to "<< Return to Articles", article_index_path
+	- if @article.status == 2
+		.alert.alert-warning 
+			strong This article is in preview mode
+	-elsif @article.status == 0
+		.alert.alert-danger
+			strong This article is unpublished
+	article
+		h1
+			= @article.title
+		h5
+			| Posted by 
+			= @article.user.name
+			|  on 
+			= @article.created_at.in_time_zone("Pacific Time (US & Canada)").strftime('%h %d, %Y @ %l:%M %p')
+		= @article.body.html_safe

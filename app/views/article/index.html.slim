@@ -6,8 +6,17 @@
 	- @articles.each do |article|
 		article
 			.title
-				h2 #{article.title}
-			.image-preview style="background-image: url(#{article.gallery.try(:attachment_url)})"
+				= link_to show_article_path(article) do
+					h2 #{article.title}
+			- if article.status == 2
+				.alert.alert-warning 
+					strong This article is in preview mode
+			-elsif article.status == 0
+				.alert.alert-danger
+					strong This article is unpublished
+					
+			= link_to show_article_path(article) do
+				.image-preview style="background-image: url(#{article.gallery.try(:attachment_url)})"
 			.preview
 				= Nokogiri::HTML.parse(article.body).css('p').first.to_s.html_safe
 			.read-more
