@@ -9,8 +9,10 @@ class ArticleController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
-		@exif = EXIFR::JPEG.new('public'+@article.gallery.attachment_url).to_hash
-		process_exif(@exif)
+		if File.exist?('public'+@article.gallery.attachment_url)
+			@exif = EXIFR::JPEG.new('public'+@article.gallery.attachment_url).to_hash
+			process_exif(@exif)
+		end
 		if @article.status == 1 || @article.status == 2 || signed_in?
 			render 'show'
 		else
