@@ -12,4 +12,4 @@ CKEDITOR.config.toolbar = [
 
 CKEDITOR.config.allowedContent = true; 
 
-CKEDITOR.config.contentsCss = '/assets/fonts.css';
+CKEDITOR.config.contentsCss = '/fonts.css';
