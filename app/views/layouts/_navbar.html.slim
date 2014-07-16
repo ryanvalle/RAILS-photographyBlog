@@ -11,12 +11,12 @@ nav.navbar.navbar-inverse
 
 	.collapse.navbar-collapse#main-navbar-collapse
 		ul.nav.navbar-nav.pull-right
+			li
+				=link_to "Home", root_path
 			li 
 				= link_to "About", about_path
 			li
 				= link_to "Articles", article_index_path
-			li
-				= link_to "Contact"
 			- if signed_in?
 				li.dropdown 
 					= link_to "#", class: "dropdown-toggle", data: { toggle: "dropdown" } do

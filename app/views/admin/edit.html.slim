@@ -12,6 +12,9 @@
 		br
 		= f.label "Associate an Image (Insert ID #)"
 		= f.text_field :gallery_id, class: "form-control"
+		= f.check_box :exifshow
+		| &nbsp;
+		= f.label "Show Exif Data"
 		.admin-image-preview
 			= image_tag @article.gallery.try(:attachment_url)
 		br
