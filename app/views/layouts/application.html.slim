@@ -3,7 +3,7 @@ html
 	head
 		title 
 			= yield(:title)
-		= custom_meta(@article).html_safe if @article.present?
+		= custom_meta(@article).html_safe if @article.present? && params[:controller] != 'admin'
 		= default_meta.html_safe unless @article.present?
 		= stylesheet_link_tag 'application', media: 'all'
 		= stylesheet_link_tag params[:controller] if Technimg::Application.assets.find_asset("#{params[:controller]}.css")
