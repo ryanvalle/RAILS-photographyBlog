@@ -10,6 +10,7 @@ html
 		= javascript_include_tag 'application'
   	= csrf_meta_tags
 	body
+		= render partial: 'shared/google_analytics'
 		= render partial: 'layouts/navbar'
 		= yield
 		= render partial: 'layouts/footer'
