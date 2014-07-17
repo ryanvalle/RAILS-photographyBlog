@@ -54,17 +54,16 @@ class ArticleController < ApplicationController
 			exif_data.delete(:gps_time_stamp)
 			exif_data.delete(:gps_dop)
 			exif_data.delete(:gps_date_stamp)
+			exif_data.delete(:date_time)
+			exif_data.delete(:date_time_original)
+			exif_data.delete(:date_time_original_digitized)
+			exif_data.delete(:gps_date_stamp)
+			exif_data.delete(:gps_date_stamp)
 
 
 			exif_data[:exposure_time] = exif_data[:exposure_time].to_i if exif_data[:exposure_time].present?
 
 			exif_data[:f_number] = exif_data[:f_number].to_i if exif_data[:f_number].present?
-
-			exif_data[:date_time] = exif_data[:date_time].in_time_zone("Pacific Time (US & Canada)").strftime('%h %d, %Y @ %l:%M %p') if exif_data[:date_time].present?
-
-			exif_data[:date_time_original] = exif_data[:date_time_original].in_time_zone("Pacific Time (US & Canada)").strftime('%h %d, %Y @ %l:%M %p') if exif_data[:date_time_original].present?
-
-			exif_data[:date_time_digitized] = exif_data[:date_time_digitized].in_time_zone("Pacific Time (US & Canada)").strftime('%h %d, %Y @ %l:%M %p') if exif_data[:date_time_digitized].present?
 		end
 end
 
