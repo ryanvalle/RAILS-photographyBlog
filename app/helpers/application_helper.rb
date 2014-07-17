@@ -23,11 +23,11 @@ module ApplicationHelper
 
 	private 
 		def meta_description(data)
-			"<meta name='description' content='technimg :: #{truncate(strip_tags(data.body), length: 150, ommission: '...')}'>"
+			"<meta name='description' content='#{truncate(strip_tags(data.body), length: 150, ommission: '...')}'>"
 		end
 
 		def og_meta(data)
-			"<meta property='og:title' content='#{data.title}' >" +
+			"<meta property='og:title' content='technimg :: #{data.title}' >" +
 			"<meta property='og:type' content='article' >" +
 			"<meta property='og:image' content='http://www.technimg.com#{data.gallery.attachment_url}' >" +
 			"<meta property='og:url' content='http://www.technimg.com#{show_article_path(data)}' >" +
