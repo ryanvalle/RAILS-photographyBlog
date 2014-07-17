@@ -23,7 +23,7 @@ module ApplicationHelper
 
 	private 
 		def meta_description(data)
-			"<meta name='description' content='#{truncate(strip_tags(data.body), length: 150, ommission: '...')}'>"
+			"<meta name='description' content='technimg :: #{truncate(strip_tags(data.body), length: 150, ommission: '...')}'>"
 		end
 
 		def og_meta(data)
