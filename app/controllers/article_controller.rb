@@ -56,7 +56,7 @@ class ArticleController < ApplicationController
 			exif_data.delete(:gps_date_stamp)
 			exif_data.delete(:date_time)
 			exif_data.delete(:date_time_original)
-			exif_data.delete(:date_time_original_digitized)
+			exif_data.delete(:date_time_digitized)
 			exif_data.delete(:gps_date_stamp)
 			exif_data.delete(:gps_date_stamp)
 
