@@ -21,7 +21,7 @@
 			| Posted by 
 			= @article.user.name
 			|  on 
-			= @article.created_at.in_time_zone("Pacific Time (US & Canada)").strftime('%h %d, %Y @ %l:%M %p')
+			= @article.updated_at.in_time_zone("Pacific Time (US & Canada)").strftime('%h %d, %Y @ %l:%M %p')
 		- if @article.exifshow
 			.exif-data
 				#toggle-exif-data Toggle Photo Information
