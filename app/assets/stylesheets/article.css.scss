@@ -62,11 +62,16 @@
 
 #article {
 	img {
-		width: 60%;
+		width: 80%;
 		margin: 0 auto;
 		border: 5px solid #fff;
 		box-shadow: 0 0 10px #000;
 		display: block;
+		@media screen and (max-width: 760px) {
+			width: 95%;
+			border: 3px solid #fff;
+			box-shadow: 0 0 5px #000;
+		}
 	}
 	.target {
 		width: 100%;
