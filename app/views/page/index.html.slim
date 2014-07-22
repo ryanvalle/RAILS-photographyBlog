@@ -17,7 +17,7 @@
 				.title
 					= @articles[0].try(:title)
 				.darken
-	-if @articles.count > 4
+	-if @articles.count > 6
 		.tilainer.col-sm-8
 			= link_to show_article_path(@articles[1]) do
 				.tile style="background-image: url(#{@articles[1].try(:gallery).try(:attachment_url)})"
