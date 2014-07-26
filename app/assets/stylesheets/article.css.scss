@@ -6,7 +6,7 @@
 
 #articles {	
 	.hero {
-		background-image: asset-url("backgrounds/background_article_1.jpg",image);
+		background-image: image-url("backgrounds/background_article_1.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-repeat: none;

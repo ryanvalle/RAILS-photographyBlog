@@ -6,7 +6,7 @@
 
 .container-fluid#index {
 	.hero {
-		background-image: asset-url("backgrounds/background_empire_state.jpg",image);
+		background-image: image-url("backgrounds/background_empire_state.jpg");
 		background-size: cover;
 		background-position: center top;
 		background-repeat: none;
@@ -31,7 +31,7 @@
 			padding: 20px;
 		}
 		.logo {
-			background-image: asset-url("logos/technimg_logo_white_shadow_md.png",image);
+			background-image: image-url("logos/technimg_logo_white_shadow_md.png");
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -79,7 +79,7 @@
 
 .container-fluid#about {
 	.hero {
-		background-image: asset-url("backgrounds/background_blurred_fireworks.jpg",image);
+		background-image: image-url("backgrounds/background_blurred_fireworks.jpg");
 		background-size: cover;
 		background-position: center top;
 		background-repeat: none;
