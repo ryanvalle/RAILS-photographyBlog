@@ -9,6 +9,8 @@ class ArticleController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@prev_article = Article.find_by_id(@article.id - 1)
+		@next_article = Article.find_by_id(@article.id + 1) 
 		if File.exist?('public'+@article.gallery.attachment_url)
 			@exif = EXIFR::JPEG.new('public'+@article.gallery.attachment_url).to_hash
 			process_exif(@exif)

@@ -130,4 +130,18 @@
 			}
 		}
 	}
+	.more-links {
+		border-top: 1px solid #ccc;
+		padding: 10px 0 0 0;
+		a {
+			text-decoration: none;
+		}
+		.custom-center {
+			margin: 0 auto;
+			display: block;
+			width: 163px;
+			font-size: 18px;
+			text-decoration: none;
+		}
+	}
 }

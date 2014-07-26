@@ -33,3 +33,19 @@
 									td #{k.to_s.gsub(/[_]+/," ").split(' ').map {|w| w.capitalize }.join(' ')}
 									td #{v}
 		= @article.body.html_safe
+
+	.more-links
+		- if @next_article
+			= link_to article_path(@next_article) do
+				.btn.btn-info.pull-left 
+					| << 
+					=@next_article.title
+
+		- if @prev_article
+			= link_to article_path(@prev_article) do
+				.btn.btn-info.pull-right 
+					=@prev_article.title
+					|  >>
+
+		= link_to article_index_path do
+			.btn.btn-info.custom-center Return to Articles
